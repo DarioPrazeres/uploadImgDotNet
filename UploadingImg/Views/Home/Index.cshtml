@@ -1,0 +1,26 @@
+﻿@model UploadingImg.Models.Image
+
+@{
+    ViewBag.Title = "Uploading Image";
+}
+@using (Html.BeginForm("Index","Home" ,FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <section class="container-image">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form">
+            <h1>Upload your image </h1>
+            <p>File should be JPeg, Png...</p>
+            <input type="file" name="file" id="file" accept="image/*" required/>
+            <label name="file" for="file">
+                <div class="pictureBox">
+                    <img src="~/asset/Imagens/image.svg" />
+                    <p>Drag & Drop Or Touch in image here</p>
+                </div>
+            </label>
+            <button type="submit" class="file btn ">
+                Upload Image
+            </button>
+        </div>
+    </section>
+}

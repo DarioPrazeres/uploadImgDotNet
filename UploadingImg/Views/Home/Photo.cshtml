@@ -1,0 +1,29 @@
+﻿@model UploadingImg.Models.Image
+
+@{
+    ViewBag.Title = "Photo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container visual">
+    <div class="success">
+        <img src="~/asset/Imagens/sucesso.png" class="imgIcon" />
+        <h2>Uploaded Successfully!</h2>
+        <img class="banner" src="@Url.Content(Model.NameFile)" />
+        <div class="form-Domain">
+            <input type="text" value="@ViewBag.CurrentDomain" id="valorParaCopiar" disabled />
+            <button onclick="copiarValor()">Copy Link</button>
+        </div>
+    </div>
+</div>
+
+<script>
+        function copiarValor() {
+            var inputElement = document.getElementById("valorParaCopiar");
+            // Selecionar o conteúdo do campo de entrada
+            inputElement.select();
+            inputElement.setSelectionRange(0, 99999); // Para dispositivos móveis
+            document.execCommand("copy");
+            alert("Valor copiado: " + inputElement.value);
+        }
+</script>
