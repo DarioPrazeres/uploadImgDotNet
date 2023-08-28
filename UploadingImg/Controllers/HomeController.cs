@@ -34,11 +34,8 @@ namespace UploadingImg.Controllers
 
                 if (IsVerificationExtension(extension))
                 {
-                    if (Image.file.ContentLength <= 1000000)
-                    {
-                        Image.file.SaveAs(path);
-                        Save(Image);
-                    }
+                    Image.file.SaveAs(path);
+                    Save(Image);
                 }
             }
             return RedirectToAction("Photo", new { id = Image.Id });
