@@ -1,0 +1,114 @@
+﻿* {
+    font-family: 'Exo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+.container-image{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-image .pictureBox{
+    border: 2px dashed #97BEF4;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    justify-content: space-around;
+}
+.container-image .pictureBox img {   
+    width: 210px;
+    height: 180px;
+}
+input[type="file"] {
+    display: none;
+    border: 2px solid red;
+}
+button.file {
+    color: white;
+    background: #2F80ED;
+}
+button.file:hover {
+    color: white;
+}
+/*Tratamento da apresentacao da Imagem*/
+.visualizacao{
+    height: 225px;
+    width: 446px;
+}
+.visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    width: 500px;
+    height: 700px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
+}
+.success .imgIcon{
+    width: 70px;
+    height: 70px;
+}
+.success .banner{
+    width: 85%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+.form-Domain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid var(#E0E0E0);
+    background: #F6F8FB;
+}
+.form-Domain input{
+    width: 70%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: none;
+    padding-left: 4px;
+}
+.form-Domain input:focus{
+    border: none;
+    outline: none;
+}
+.form-Domain button{
+    border: none;
+    height: 40px;
+    width: 28%;
+    border-radius: 8px;
+    background: #2F80ED;
+    height: 40px;
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+footer {
+    text-align: center;
+}
